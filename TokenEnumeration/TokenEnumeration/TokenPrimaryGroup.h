@@ -15,29 +15,7 @@ VOID PrintTokenPrimaryGroup(HANDLE hTok) {
 	
 	std::wcout << L"[+] Token Primary Group" << std::endl;
 
-	// print sid
-	LPWSTR lpsid = SIDSerialize(ptokprimarygroup->PrimaryGroup);
-	if (!lpsid) {
-		PrintError(L"SIDSerizlize()");
-	}
-	else {
-		std::wcout << L"\tSID: " << lpsid << std::endl;
-	}
-	LocalFree(lpsid);
-	lpsid = nullptr;
-
-	// print sid name
-	LPWSTR lpName, lpDomainName;
-	PSID_NAME_USE psidnameuse;
-	lpName = (LPWSTR)VirtualAlloc(NULL, 126, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-	lpDomainName = (LPWSTR)VirtualAlloc(NULL, 126, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-	psidnameuse = (PSID_NAME_USE)malloc(sizeof(PSID_NAME_USE));
-	if (GetSIDName(ptokprimarygroup->PrimaryGroup, lpName, lpDomainName, psidnameuse)) {
-		std::wcout << L"\tDomain\\Account (Type):\t" << lpDomainName << L"\\" << lpName << L" (" << getSidNameUse(*psidnameuse) << L")" << std::endl;
-		VirtualFree(lpName, 0x0, MEM_RELEASE);
-		VirtualFree(lpDomainName, 0x0, MEM_RELEASE);
-		lpName = lpDomainName = nullptr;
-	}
+	PrintSID(ptokprimarygroup->PrimaryGroup);
 
 	// Clean up
 	VirtualFree(ptokprimarygroup, 0x0, MEM_RELEASE);

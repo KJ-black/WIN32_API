@@ -1,5 +1,4 @@
 ﻿  TokenEnumeration.cpp
 D:\Tools\Windows\WIN32_API\TokenEnumeration\TokenEnumeration\ElevationHelp.h(83,9): warning C4551: function call missing argument list
 D:\Tools\Windows\WIN32_API\TokenEnumeration\TokenEnumeration\Utils.h(34): warning C4715: 'getSidNameUse': not all control paths return a value
-D:\Tools\Windows\WIN32_API\TokenEnumeration\TokenEnumeration\TokenDefaultDacl.h(45): warning C4715: 'getAceType': not all control paths return a value
   TokenEnumeration.vcxproj -> D:\Tools\Windows\WIN32_API\TokenEnumeration\Debug\TokenEnumeration.exe
