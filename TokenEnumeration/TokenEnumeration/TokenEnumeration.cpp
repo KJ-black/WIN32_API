@@ -37,24 +37,23 @@ INT wmain(int argc, LPWSTR argv[]) {
 
     // Print each of the token information class
     // https://learn.microsoft.com/en-us/windows/win32/api/winnt/ne-winnt-token_information_class
-    PrintTokenUser(hTok);
-    PrintTokenGroups(hTok);
+    PrintTokenUser(hTok); 
+    PrintTokenGroups(hTok); 
     PrintTokenPrivileges(hTok);
-    PrintTokenOwner(hTok);
+    PrintTokenOwner(hTok); 
     PrintTokenPrimaryGroup(hTok);
     PrintTokenDefaultDacl(hTok);
-    /*PrintTokenSource,
-    PrintTokenType,
-    PrintTokenImpersonationLevel,
-    PrintTokenStatistics,
-    PrintTokenRestrictedSids,
-    PrintTokenSessionId,
-    PrintTokenGroupsAndPrivileges,
-    PrintTokenSessionReference,
-    PrintTokenSandBoxInert,
-    PrintTokenAuditPolicy,
-    PrintTokenOrigin,
-    PrintTokenElevationType,
+    PrintTokenSource(hTok); 
+    PrintTokenType(hTok);
+    PrintTokenStatistics(hTok);
+    PrintTokenRestrictedSids(hTok);
+    PrintTokenSessionId(hTok);
+    //PrintTokenGroupsAndPrivileges(hTok);
+    //PrintTokenSessionReference(hTok);
+    PrintTokenSandBoxInert(hTok);
+    //PrintTokenAuditPolicy(hTok);
+    PrintTokenOrigin(hTok);
+        /*PrintTokenElevationType,
     PrintTokenLinkedToken,
     PrintTokenElevation,
     PrintTokenHasRestrictions,

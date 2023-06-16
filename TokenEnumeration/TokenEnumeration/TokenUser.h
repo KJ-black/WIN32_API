@@ -1,5 +1,6 @@
 #pragma once
 #include "Utils.h"
+#include "ErrorHandling.h"
 
 VOID PrintTokenUser(HANDLE hTok) {
 	DWORD dwTokLen = GetTokenInfoLength(hTok, TokenUser);

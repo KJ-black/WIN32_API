@@ -60,7 +60,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce0->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce0->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -70,7 +70,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce9->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce9->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -80,7 +80,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceB->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceB->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -94,7 +94,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce5->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce5->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -104,7 +104,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce1->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce1->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -114,7 +114,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceA->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceA->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -124,7 +124,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceC->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceC->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -134,7 +134,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce6->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce6->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -144,7 +144,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce8->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce8->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -154,7 +154,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce3->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce3->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -164,7 +164,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceE->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceE->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -174,7 +174,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce10->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce10->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -184,7 +184,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce2->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce2->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;			
 			}
@@ -194,7 +194,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceD->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceD->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;				
 			}
@@ -204,7 +204,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAceF->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAceF->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -214,7 +214,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce7->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce7->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}
@@ -224,7 +224,7 @@ VOID PrintTokenDefaultDacl(HANDLE hTok) {
 				accessMask = pAccessAce11->Mask;
 				pSID = reinterpret_cast<PSID>(&pAccessAce11->SidStart);
 				PrintSID(pSID);
-				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::endl;
+				std::wcout << L"\t     Mask: " << std::hex << accessMask << std::dec << std::endl;
 				checkAccessMask(accessMask);
 				break;
 			}

@@ -149,10 +149,16 @@
     <ClInclude Include="ProcessDetails.h" />
     <ClInclude Include="TokenDefaultDacl.h" />
     <ClInclude Include="TokenGroups.h" />
+    <ClInclude Include="TokenOrigin.h" />
     <ClInclude Include="TokenOwner.h" />
     <ClInclude Include="TokenPrimaryGroup.h" />
     <ClInclude Include="TokenPrivileges.h" />
+    <ClInclude Include="TokenRestrictedSids.h" />
+    <ClInclude Include="TokenSandBoxInert.h" />
     <ClInclude Include="TokenSessionId.h" />
+    <ClInclude Include="TokenSource.h" />
+    <ClInclude Include="TokenStatistics.h" />
+    <ClInclude Include="TokenType.h" />
     <ClInclude Include="TokenUser.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

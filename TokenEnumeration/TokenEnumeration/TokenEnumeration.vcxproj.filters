@@ -59,5 +59,23 @@
     <ClInclude Include="TokenDefaultDacl.h">
       <Filter>Header Files\Token Classes</Filter>
     </ClInclude>
+    <ClInclude Include="TokenSource.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenType.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenStatistics.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenRestrictedSids.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenSandBoxInert.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenOrigin.h">
+      <Filter>Header Files\Token Classes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

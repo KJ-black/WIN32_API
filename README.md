@@ -20,7 +20,7 @@
 		- EqualSid
 		- LookupAccountSid
 
-- TokenEnumeration
+- [TokenEnumeration](https://www.notion.so/kj-black/TokenEnumeration-with-WIN32-API-de4cf04b4ec84bbe8e176ee6e202f9c9)
 	- Purpose: Enumerate all information in the access token. 
 
 ### Privilege
