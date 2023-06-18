@@ -13,7 +13,6 @@ VOID PrintTokenOrigin(HANDLE hTok) {
 		return;
 	}
 	std::wcout << L"[+] Token Origin LogonId: " << std::hex << std::uppercase << ptokorigin->OriginatingLogonSession.HighPart << L":" << ptokorigin->OriginatingLogonSession.LowPart << std::dec << std::nouppercase << std::endl;
-
 	
 	// Clean up
 	VirtualFree(ptokorigin, 0x0, MEM_RELEASE);
