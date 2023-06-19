@@ -1,10 +1,7 @@
 #include "pch.h"
-#include "inspectable.h"
+
 INT wmain(int argc, LPWSTR argv[]) {
 
-    if (PartialTrust) {
-
-    }
     if (argc < 2) {
         std::wcout << L"Usage: " << argv[0] << L" <PID>" << std::endl;
         return 1;
@@ -56,7 +53,7 @@ INT wmain(int argc, LPWSTR argv[]) {
     PrintTokenSandBoxInert(hTok);
     //PrintTokenAuditPolicy(hTok);
     PrintTokenOrigin(hTok);
-        /*PrintTokenElevationType,
+    /*PrintTokenElevationType,
     PrintTokenLinkedToken,
     PrintTokenElevation,
     PrintTokenHasRestrictions,
