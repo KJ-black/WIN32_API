@@ -20,7 +20,7 @@ INT wmain(DWORD argc, LPWSTR argv[]) {
     std::wstring trustlevel;
 
     // Parsing the options
-    for (int i = 2; i < argc - 2; ++i) {
+    for (int i = 1; i < argc - 2; ++i) {
         std::wstring option = argv[i];
         if (option == L"/profile") {
             bProfile = true;
@@ -64,25 +64,39 @@ INT wmain(DWORD argc, LPWSTR argv[]) {
     std::wcout << L"Enter the password for " << wsUserFull << L":";
     std::wstring wsPassword = getPassword();
 
-    // LogonUserW
+    // Logon Info
     STARTUPINFO si = { 0 };
     PROCESS_INFORMATION pi = { 0 };
     LPVOID lpEnvironment = NULL;
     si.cb = sizeof(STARTUPINFO);
-    ZeroMemory(&si, sizeof(STARTUPINFO));
-    si.hStdError = si.hStdOutput;
-    si.dwFlags |= STARTF_USESTDHANDLES;
     std::wstring wsUsername;
     std::wstring wsDomain;
-    if (wsUserFull.find(L"\\") != std::string::npos) {
-        getUser(wsUserFull, wsUsername, wsDomain);
-        if (!CreateProcessWithLogonW(wsUsername.c_str(), wsDomain.c_str(), wsPassword.c_str(), 0, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
-            PrintError(L"CreateProcessWithLogonW()", false);
+
+    if (bNetonly) {
+        if (DEBUG) std::wcout << L"netonly flag" << std::endl;
+        if (wsUserFull.find(L"\\") != std::string::npos) {
+            getUser(wsUserFull, wsUsername, wsDomain);
+            if (!CreateProcessWithLogonW(wsUsername.c_str(), wsDomain.c_str(), wsPassword.c_str(), LOGON_NETCREDENTIALS_ONLY, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
+                PrintError(L"CreateProcessWithLogonW()", false);
+            }
+        }
+        else {
+            if (!CreateProcessWithLogonW(wsUserFull.c_str(), NULL, wsPassword.c_str(), LOGON_NETCREDENTIALS_ONLY, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
+                PrintError(L"CreateProcessWithLogonW()", false);
+            }
         }
     }
     else {
-        if (!CreateProcessWithLogonW(wsUserFull.c_str(), NULL, wsPassword.c_str(), 0, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
-            PrintError(L"CreateProcessWithLogonW()", false);
+        if (wsUserFull.find(L"\\") != std::string::npos) {
+            getUser(wsUserFull, wsUsername, wsDomain);
+            if (!CreateProcessWithLogonW(wsUsername.c_str(), wsDomain.c_str(), wsPassword.c_str(), 0, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
+                PrintError(L"CreateProcessWithLogonW()", false);
+            }
+        }
+        else {
+            if (!CreateProcessWithLogonW(wsUserFull.c_str(), NULL, wsPassword.c_str(), 0, wProgramFull, nullptr, NULL, lpEnvironment, nullptr, &si, &pi)) {
+                PrintError(L"CreateProcessWithLogonW()", false);
+            }
         }
     }
 
@@ -94,10 +108,4 @@ INT wmain(DWORD argc, LPWSTR argv[]) {
     }
     
     SecureZeroMemory(&wsPassword, sizeof(wsPassword));
-    
-    /*
-    HANDLE hDuplicate;
-    if (!DuplicateTokenEx(hTok, TOKEN_ALL_ACCESS, NULL, SecurityImpersonation, TokenPrimary, &hDuplicate)) {
-        PrintError(L"DuplicateTokenEx");
-    }  */
 }
