@@ -2,6 +2,11 @@
 
 ## Authentication
 
+- [runas](https://kj-black.notion.site/runas-ae4c587290d6411eb9133b69930b19a9?pvs=4)
+    - Purpose: Reproduce the Microsfot built-in tools [Runas](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771525(v=ws.11)
+    - API:
+        - LogonUserW
+
 ### Winlogon
 - [credentialPrompt](https://learn.microsoft.com/en-us/windows/win32/secbp/asking-the-user-for-credentials)
 	- Purpose: Create a simple credential prompt

@@ -141,6 +141,11 @@
   <ItemGroup>
     <ClCompile Include="runas.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ErrorHandling.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
